@@ -4,16 +4,26 @@
              x:Class="SimpleMindMaster.WelcomeMaster"
              BackgroundColor="Black">
     <ContentPage.Content>
-        
-            <Label Text="Welcome, Master!"
-               VerticalOptions="Center"
-               HorizontalTextAlignment="Center"
-               Rotation="-15"
-               IsVisible="true"
-               FontSize="Large"
-               FontAttributes="Bold"
-               TextColor="White" />
-
-        
+        <StackLayout
+            Padding="400"
+            Spacing="40">
+            <Label Text="Welcome Master"
+                   TextColor="Black"
+                   BackgroundColor="AliceBlue"
+                  HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="Large"
+                   FontAttributes="Bold, Italic"/>
+            <Button Text="Start" Style="{StaticResource buttonStyle}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            <Button Text="Options" Style="{StaticResource buttonStyle}" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            <Button Text="About" Style="{StaticResource buttonStyle}" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+        </StackLayout>
     </ContentPage.Content>
+    
 </ContentPage>

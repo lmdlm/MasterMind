@@ -8,23 +8,21 @@ using Xamarin.Forms;
 namespace SimpleMindMaster
 {
     public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            Button button = new Button
-            {
-                Text = "Start!",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            };
+    { 
+        
+            //Button button = new Button
+            //{
+            //    Text = "Start!",
+            //    HorizontalOptions = LayoutOptions.Center,
+            //    VerticalOptions = LayoutOptions.Center
+            //};
 
-            button.Clicked += async (sender, args) =>
-            {
-                await Navigation.PushAsync(new WelcomeMaster());
-            };
+            //button.Clicked += async (sender, args) =>
+            //{
+            //    await Navigation.PushAsync(new WelcomeMaster());
+            //};
 
-            Content = button;
-        }
+            //Content = button;
+        
     }
 }
