@@ -9,20 +9,15 @@ namespace SimpleMindMaster
 {
     public partial class MainPage : ContentPage
     { 
-        
-            //Button button = new Button
-            //{
-            //    Text = "Start!",
-            //    HorizontalOptions = LayoutOptions.Center,
-            //    VerticalOptions = LayoutOptions.Center
-            //};
 
-            //button.Clicked += async (sender, args) =>
-            //{
-            //    await Navigation.PushAsync(new WelcomeMaster());
-            //};
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+        async private void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new WelcomeMaster());
+        }
 
-            //Content = button;
-        
     }
 }

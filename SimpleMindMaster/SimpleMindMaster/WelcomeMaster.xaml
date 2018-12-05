@@ -2,28 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SimpleMindMaster.WelcomeMaster"
-             BackgroundColor="Black">
-    <ContentPage.Content>
-        <StackLayout
-            Padding="400"
-            Spacing="40">
-            <Label Text="Welcome Master"
-                   TextColor="Black"
-                   BackgroundColor="AliceBlue"
-                  HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   FontSize="Large"
-                   FontAttributes="Bold, Italic"/>
-            <Button Text="Start" Style="{StaticResource buttonStyle}"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
-            <Button Text="Options" Style="{StaticResource buttonStyle}" 
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
-            <Button Text="About" Style="{StaticResource buttonStyle}" 
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
-        </StackLayout>
-    </ContentPage.Content>
+             BackgroundColor="Black"
+             Padding="50">
     
+    <StackLayout >
+        
+        
+
+        
+
+    </StackLayout>
+
 </ContentPage>
+
