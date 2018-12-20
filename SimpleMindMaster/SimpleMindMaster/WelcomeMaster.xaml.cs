@@ -11,17 +11,28 @@ namespace SimpleMindMaster
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class WelcomeMaster : ContentPage
-	{
-        // == global constants ==
-        private const int NUMBER_ROW = 3;
-        private const int NUMBER_COL = 3;
-        
-        public WelcomeMaster ()
-		{
-			InitializeComponent ();
+    {
+        public WelcomeMaster()
+        {
+            InitializeComponent();
 
 
-            var grid = new Grid { ColumnSpacing = 150, RowSpacing = 150};
+
+
+            var orangeButton = new Style(typeof(Button))
+            {
+                Setters =
+                {
+                    new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#E8AD00") },
+                    new Setter { Property = Button.TextColorProperty, Value = Color.White },
+                    new Setter { Property = Button.BorderRadiusProperty, Value = 50 },
+                    new Setter { Property = Button.FontSizeProperty, Value = 40 }
+                }
+            };
+
+
+
+            var grid = new Grid { ColumnSpacing = 150, RowSpacing = 150 };
 
             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
@@ -31,16 +42,26 @@ namespace SimpleMindMaster
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
 
-            var cell1 = new Frame { Content = new Entry { Text =""}, BorderColor = Color.Silver};
-            var cell2 = new Frame { Content = new Entry { Text = "" }, BorderColor = Color.Silver };
-            var cell3 = new Frame { Content = new Entry { Text = "" }, BorderColor = Color.Silver };
-            var cell4 = new Frame { Content = new Entry { Text = "" }, BorderColor = Color.Silver};
-            var cell5 = new Frame { Content = new Entry { Text = "" }, BorderColor = Color.Silver};
-            var cell6 = new Frame { Content = new Entry { Text = "" }, BorderColor = Color.Silver};
-            var cell7 = new Frame { Content = new Entry { Text = "" }, BorderColor = Color.Silver};
-            var cell8 = new Frame { Content = new Entry { Text = "" }, BorderColor = Color.Silver };
-            var cell9 = new Frame { Content = new Entry { Text = "" }, BorderColor = Color.Silver };
-            var cell10 = new Frame { Content = new Entry { Text = "" }, BorderColor = Color.Silver };
+            var cell1 = new Button { Text = "'='", BackgroundColor = Color.White };
+            cell1.Clicked += (object sender, EventArgs e) =>
+                {
+                    DisplayAlert("Alert", "You have been alerted", "OK");
+                };
+            var cell2 = new Button { Text = "'='", BackgroundColor = Color.White };
+            var cell3 = new Button { Text = "'='", BackgroundColor = Color.White };
+            var cell4 = new Button { Text = "'='", BackgroundColor = Color.White };
+            var cell5 = new Button { Text = "'='", BackgroundColor = Color.White };
+            var cell6 = new Button { Text = "'='", BackgroundColor = Color.White };
+            var cell7 = new Button { Text = "'='", BackgroundColor = Color.White };
+            var cell8 = new Button { Text = "'='", BackgroundColor = Color.White };
+            var cell9 = new Button { Text = "'='", BackgroundColor = Color.White };
+            var cell10 = new Button { Text = "CHECK", Style = orangeButton };
+            cell10.Clicked += (object sender, EventArgs e) =>
+            {
+                DisplayAlert("Alert", "You have been alerted", "OK");
+            };
+
+
 
             grid.Children.Add(cell1, 0, 0);
             grid.Children.Add(cell2, 0, 1);
@@ -55,6 +76,8 @@ namespace SimpleMindMaster
             Grid.SetColumnSpan(cell10, 3);
 
             Content = grid;
+
         }
-	}
+      
+    }
 }
